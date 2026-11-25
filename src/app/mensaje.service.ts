@@ -2,6 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+//MODIFICACIÓN PARA LA RAMA QA
 //EL MENSAJERO HACIA JAVA
 //se encarga de la lógica de datos y de comunicarse con servidores externos
 
