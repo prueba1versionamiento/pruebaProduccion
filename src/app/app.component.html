@@ -1,0 +1,63 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+
+
+<br />
+<br />
+<label for="mensaje1">Ingrese el mensaje:</label>
+<input id="mensaje1" type="text" pInputText [(ngModel)]="textoIngresado" placeholder="Escribe aquí..." />
+<br />
+<br />
+<p-button label="Muestra la transacción" (onClick)="procesarTransaccion()" />
+<br />
+<br />
+@if (transaccionExitosa) {
+<p-message severity="success" size="small" placeholder="Full"> TRANSACCION REALIZADA CORRECTAMENTE </p-message>
+<br/>
+  <p-message severity="success" size="small" placeholder="Full"> Mensaje:{{mensajeaMostrar}}</p-message>
+} 
+
+
+
+<br />
+<div>
+  <label for="nombre">Nombre completo:</label><br />
+  <input id="nombre" type="text" pInputText [(ngModel)]="transaccionDatos.nombre" />
+</div>
+<br />
+
+<div>
+  <label for="cedula">Cédula:</label><br />
+  <input id="cedula" type="text" pInputText [(ngModel)]="transaccionDatos.cedula" />
+</div>
+<br />
+
+<div>
+  <label for="monto">Monto en $:</label><br />
+  <input id="monto" type="number" pInputText [(ngModel)]="transaccionDatos.monto" >
+</div>
+<br />
+
+<p-button label="Procesar transacción" (onClick)="procesarTransaccionDeDatos()" />
+<!--<p-message severity="info" size="small">{{conjuntoMostrar}}</p-message>-->
+<br /><br />
+
+@if (transaccionExitosaConjunto === true) {  
+  <p-message severity="success" size="small">TRANSACCIÓN REALIZADA CORRECTAMENTE</p-message>
+  <p-message severity="info" size="small">{{ conjuntoMostrar }}</p-message>
+  <br /> 
+} @else if (transaccionExitosaConjunto === false) {
+  <p-message severity="error" size="small">ERROR AL REALIZAR LA TRANSACCIÓN</p-message>
+  <br />
+}
+
+<router-outlet />
