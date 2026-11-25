@@ -6,6 +6,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { MessageModule } from 'primeng/message';
 import { MensajeService, Transaccion_eve } from './mensaje.service';
 
+//CAMBIO A GUARDAR DENTRO DE LA RAMA DE DESARROLLO DE SU RAMA SUPERIOR PRODUCCION
 
 @Component({
   selector: 'app-root',
