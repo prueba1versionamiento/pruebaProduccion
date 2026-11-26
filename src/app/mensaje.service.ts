@@ -25,7 +25,7 @@ export class MensajeService {
   enviarMensaje(texto: string): Observable<any> {
     const cuerpo = { mensaje: texto };  //Lo escribe en formato JSON LO QUE SE INGRESÓ EN PANTALLA
     return this.http.post<any>(this.apiUrl, cuerpo);
-  }GIT
+  }
 
  //private apiUrl2 = 'http://localhost:8083/ejemplo_ws_eve/api/mensaje';
   // Ahora recibe el objeto completo
